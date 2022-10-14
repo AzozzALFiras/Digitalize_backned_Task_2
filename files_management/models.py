@@ -1,3 +1,18 @@
-from django.db import models
+from ninja import NinjaAPI, Schema
 
-# Create your models here.
+
+api=NinjaAPI()
+
+class Post:
+    title: str
+    content: str
+
+
+class PostIN(Schema):
+    title: str
+    content: str
+
+
+class PostOut(Schema):
+    first_name: str
+    last_name: str
